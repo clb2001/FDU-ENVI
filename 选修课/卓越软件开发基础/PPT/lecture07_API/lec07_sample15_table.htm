@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+		input{font-size:28pt;font-weight:bold;}
+    </style>
+  </head>
+  <body>
+	<TABLE id="table1" name="table1" border="1">
+	<TR>
+		<TD>X</TD>
+		<TD>O</TD>
+		<TD>X</TD>
+	</TR>
+	<TR>
+		<TD>O</TD>
+		<TD>O</TD>
+		<TD>O</TD>
+	</TR>
+	<TR>
+		<TD>X</TD>
+		<TD>X</TD>
+		<TD>O</TD>
+	</TR>
+	</TABLE>
+	<input type="button" value="insert row" id="button1" name="button1">
+	<input type="button" value="delete row" id="button2" name="button2">
+  </body>
+	<script>
+
+		document.getElementById("button1").onclick = function(){
+			var newRow = document.getElementById("table1").insertRow(2);
+			var newCell = newRow.insertCell(0);
+			newCell.innerText = "X";
+			newCell = newRow.insertCell(1);
+			newCell.innerText = "X";
+			newCell = newRow.insertCell(2);
+			newCell.innerText = "X";
+		};
+
+		document.getElementById("button2").onclick = function(){
+			document.getElementById("table1").deleteRow(2);
+		};
+
+	</script>
+</html>

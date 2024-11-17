@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+        var text = "cat, bat, sat, fat";        
+        //非全局匹配，每次都从第一个开始
+		var pattern1 = /.at/;
+        
+        var matches = pattern1.exec(text);        
+		//0
+		document.write("matches.index is "+matches.index+"<br>");				
+		//"cat"
+		document.write("matches[0] is "+matches[0]+"<br>");						
+		//0
+		document.write("pattern1.lastIndex is "+pattern1.lastIndex+"<br><br>");	
+
+        matches = pattern1.exec(text);        
+		//0
+		document.write("matches.index is "+matches.index+"<br>");
+		//"cat"
+		document.write("matches[0] is "+matches[0]+"<br>");	
+		//0
+		document.write("pattern1.lastIndex is "+pattern1.lastIndex+"<br><br>");	
+
+        //全局匹配，会逐个匹配
+        var pattern2 = /.at/g;
+        
+        var matches = pattern2.exec(text);        
+		//0
+		document.write("matches.index is "+matches.index+"<br>");
+		//"cat"
+		document.write("matches[0] is "+matches[0]+"<br>");	
+		//3
+		document.write("pattern2.lastIndex is "+pattern2.lastIndex+"<br><br>");	
+
+        matches = pattern2.exec(text);        
+ 		//5
+		document.write("matches.index is "+matches.index+"<br>");
+		//"bat"
+		document.write("matches[0] is "+matches[0]+"<br>");	
+		//8
+		document.write("pattern2.lastIndex is "+pattern2.lastIndex+"<br><br>");	
+
+	</script>
+  </body>
+</html>

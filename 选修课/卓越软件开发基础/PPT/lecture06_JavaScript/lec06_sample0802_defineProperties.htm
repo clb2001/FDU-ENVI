@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+        var book = {};
+        
+        Object.defineProperties(book, {
+            _year: {
+                value: 2015,
+				writable: true	//书上示例有错，此处需显式指定
+            },
+            edition: {
+                value: 1,
+				writable: true
+            },
+            year: {            
+                get: function(){
+                    return this._year;
+                },
+                
+                set: function(newValue){
+                    if (newValue > 2015) {
+                        this._year = newValue;
+                        this.edition += newValue - 2015;
+                    }                  
+                }            
+            }        
+        });
+        
+        book.year = 2020;
+		//6
+		document.write("book.edition is "+book.edition+"<br>");
+
+	</script>
+  </body>
+</html>

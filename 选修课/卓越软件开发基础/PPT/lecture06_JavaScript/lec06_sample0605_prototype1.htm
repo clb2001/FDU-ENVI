@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script>
+		function Student(){}
+		Student.prototype.id = "9924077";
+		Student.prototype.getId = function(){ return this.id;};
+		
+		var student1 = new Student();
+		var student2 = new Student();
+		Student.prototype.name = "rhino";
+				
+		document.write("student1.id is "+student1.getId()+"<br>");
+		document.write("student2.id is "+student2.getId()+"<br>");
+		document.write("student1.name is "+student1.name+"<br>");
+		document.write("student2.name is "+student2.name+"<br>");
+	</script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+        var pattern1 = /\[bc\]at/i;
+
+		//false
+		document.write("pattern1.global is "+pattern1.global+"<br>");
+		//true
+		document.write("pattern1.ignoreCase is "+pattern1.ignoreCase+"<br>");	
+		//false
+		document.write("pattern1.multiline is "+pattern1.multiline+"<br>");	
+		//0	
+		document.write("pattern1.lastIndex is "+pattern1.lastIndex+"<br>");	
+		//"\[bc\]at"
+		document.write("pattern1.source is "+pattern1.source+"<br>");		
+
+		var pattern2 = new RegExp("\\[bc\\]at", "i");
+        
+		//false
+		document.write("pattern2.global is "+pattern2.global+"<br>");		
+		//true
+		document.write("pattern2.ignoreCase is "+pattern2.ignoreCase+"<br>");	
+		//false
+		document.write("pattern2.multiline is "+pattern2.multiline+"<br>");	
+		//0
+		document.write("pattern2.lastIndex is "+pattern2.lastIndex+"<br>");	
+		//"\[bc\]at"
+		document.write("pattern2.source is "+pattern2.source+"<br>");		
+
+	</script>
+  </body>
+</html>

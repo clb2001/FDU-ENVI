@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	 <div id="div1">
+		  <p id="p1" name="p1">Hello W3C XHTML DOM!</p>
+		  <p id="p2" name="ptest">Go anywhere you want</p>
+		  <p id="p3" name="ptest">Walk the tree with me!</p>
+	  </div>
+  </body>
+	<script>
+		var p1=document.getElementById("p1");
+		p1.onclick = function(){
+		  var p2 = p1.nextElementSibling;
+		  //Go anywhere you want
+		  alert(p2.firstChild.nodeValue);
+		};
+	</script>
+
+</html>

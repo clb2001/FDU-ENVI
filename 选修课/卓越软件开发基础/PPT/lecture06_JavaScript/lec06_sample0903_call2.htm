@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script>
+
+		var color = "red";
+		var o = {color:"blue"};
+
+		function sayColor(){
+			return this.color;
+		}
+		
+		try{	
+			//red
+			document.write("sayColor is "+sayColor()+"<br>");
+			//red
+			document.write("sayColor.call(this) is "+sayColor.call(this)+"<br>");
+			//red
+			document.write("sayColor.call(window) is 			"+sayColor.call(window)+"<br>");
+			//blue
+			document.write("sayColor.call(o) is "+sayColor.call(o)+"<br>");
+		}catch(ex){
+			document.write("sayColor is unavailable"+"<br>");
+		}
+
+
+
+	</script>
+  </body>
+</html>

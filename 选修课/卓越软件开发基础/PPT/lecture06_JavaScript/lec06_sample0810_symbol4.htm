@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+        let student1 = {};
+		let name = Symbol();
+        student1.name = "robin";
+        
+		//robin
+		document.write("student1.name is "+student1.name+"<br>");
+		//undefined
+		document.write("student1[name] is "+student1[name]+"<br>");
+		//robin
+		document.write("student1['name'] is "+student1['name']+"<br>");
+		
+		student1[name] = "zdl";
+		//zdl
+		document.write("student1[name] is "+student1[name]+"<br>");
+
+
+	</script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+		h1{font-size:28pt;font-weight:bold;color:red;}
+    </style>
+  </head>
+  <body>
+	<h1>This is H1 element</h1>
+	<script> 
+		function SuperType(id){ 
+			this.id = id;
+		}
+		SuperType.prototype.getId = function(){ return this.id; };
+
+		
+		class SubType extends SuperType{ 
+			constructor(id,name){
+				super(id);
+				this.name = name;
+			}
+			getId(){ 
+				return super.getId();
+			} 
+			getName(){ 
+				return this.name;
+			} 
+		}
+
+		
+		var instance = new SubType("992407","zdl");
+
+		document.write("instance.id is "+instance.getId()+"<br>");
+		document.write("instance.name is "+instance.getName()+"<br>");
+	</script>
+  </body>
+</html>

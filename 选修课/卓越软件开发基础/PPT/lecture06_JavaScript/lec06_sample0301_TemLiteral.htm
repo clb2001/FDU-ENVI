@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style type="text/css">
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<output id="op"></output>
+	<script>
+		function output(str)
+		{
+			let op1 = document.getElementById("op");
+			let newElement = document.createElement("pre");
+			let newTextElement = document.createTextNode(str);
+			newElement.appendChild(newTextElement);
+			op1.appendChild(newElement);
+		}
+		
+		let a="Multiline\nstring";
+		let b=`Multiline 
+		string`;
+		let c="world!";
+		let d=`Hello ${c}`;
+		output(a); output(b);output(d);
+	</script>
+  </body>
+</html>

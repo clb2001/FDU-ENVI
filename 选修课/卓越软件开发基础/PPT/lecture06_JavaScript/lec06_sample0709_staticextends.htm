@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		class Student{
+			constructor(id){
+				this.id = id;
+				Student.num++;
+			}
+			
+			getId(){ 
+				return this.id; 
+			} 
+
+			static getNum(){
+				return Student.num;
+			}
+
+			static create(id){
+				return new Student(id);
+
+			}
+		}
+
+		Student.num = 0;
+		
+		class Graduate extends Student
+		{
+			constructor(id,offer){
+				super(id);
+			}
+			
+		};
+		
+		var graduate1 = new Graduate("9924077");
+		var graduate2 = Graduate.create("9924078");
+		
+		//2
+		document.write("graduate1 number is "+Graduate.getNum()+"<br>");
+		//9924077
+		document.write("graduate1 id is "+graduate1.getId()+"<br>");
+		//9924078
+		document.write("graduate2 id is "+graduate2.getId()+"<br>");
+		//true
+		document.write("graduate1 is "+(graduate1 instanceof Graduate)+"<br>");
+		//true
+		document.write("graduate1 is "+(graduate1 instanceof Student)+"<br>");
+		//false
+		document.write("graduate2 is "+(graduate2 instanceof Graduate)+"<br>");
+		//true
+		document.write("graduate2 is "+(graduate2 instanceof Student)+"<br>");
+
+     
+	</script>
+  </body>
+</html>

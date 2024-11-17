@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+        var text = "cat, bat, sat, fat, zdl";        
+        
+        result = text.match(/.at/g);
+		
+		//"cat, bat, sat, fat"
+		for(var i=0;i<result.length;i++)
+			document.write("result["+i+"] is "+result[i]+"<br>");	
+
+	</script>
+  </body>
+</html>

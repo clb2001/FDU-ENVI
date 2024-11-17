@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<p id="p1" class="para" name="ptest">Hello W3C XHTML DOM!</p>
+	<p id="p2" class="para" name="ptest">Go anywhere you want</p>
+	<p id="p3" class="para" name="ptest">Walk the tree with me!</p>
+  </body>
+	<script>
+
+		document.getElementById("p1").onclick = function(){
+			//Go anywhere you want
+			var pgroup = document.getElementsByClassName("para");
+			alert(pgroup[1].firstChild.nodeValue);
+		};
+
+	</script>
+</html>

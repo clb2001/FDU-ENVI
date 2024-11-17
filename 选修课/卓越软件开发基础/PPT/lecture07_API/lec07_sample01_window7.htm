@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+		input{font-size:28pt;font-weight:bold;}
+    </style>
+  </head>
+  <body>
+	<input type="button" value="resize window" id="button1" name="button1">
+	<input type="button" value="move window" id="button2" name="button2">
+  </body>
+	<script>
+		document.getElementById("button1").onclick = function(){
+			window.resizeTo(400,300);
+		};
+
+		document.getElementById("button2").onclick = function(){
+			window.moveBy(100,100);
+		};
+	</script>
+</html>

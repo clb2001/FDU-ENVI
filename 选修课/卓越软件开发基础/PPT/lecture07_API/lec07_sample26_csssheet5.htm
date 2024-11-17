@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style id="dyn">
+		body{font-size:16pt;background-color:white;}
+		h1{font-size:28pt;font-weight:bold;color:red;}
+		input{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<h1>This is H1 element</h1>
+	<p>Let's see the effective of css</p>
+	<input type="button" value="Change" id="button1" >
+  </body>
+	<script>
+		var btn = document.getElementById("button1");
+		
+		btn.onclick = function(){
+			var sht = document.styleSheets[0];
+			var rules = sht.cssRules || sht.rules;
+			if(rules[0].selectorText.toLowerCase() != "p")
+				if(sht.insertRule)
+					sht.insertRule("p{color:blue;}",0);
+				else
+					sht.addRule("p","color:blue;",0);
+			else
+				if(sht.deleteRule)
+					sht.deleteRule(0);
+				else
+					sht.removeRule(0);
+
+		};
+	</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		function Student(id){
+			this.id = id;
+			if(typeof this.getId != "function")
+				Student.prototype.getId = function(){ return this.id;};
+		}
+
+		Student.TEST = "test";
+		Student.GETTEST = function(){ return Student.TEST;};
+		
+		document.write("Student.TEST is "+Student.GETTEST()+"<br>");
+	</script>
+  </body>
+</html>

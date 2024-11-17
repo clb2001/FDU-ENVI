@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+		input{font-size:28pt;font-weight:bold;}
+    </style>
+  </head>
+  <body>
+	<p id="p1" name="p1">Hello W3C XHTML DOM!</p>
+	<p id="p2" name="p2">Go anywhere you want</p>
+	<p id="p3" name="p3">Walk the tree with me!</p>
+	<input type="button" value="show text" id="button1" name="button1">
+	<input type="button" value="delete text" id="button2" name="button2">
+  </body>
+	<script>
+
+		document.getElementById("button1").onclick = function(){
+			var tnode = document.getElementById("p3").firstChild;	if(tnode.nodeValue == "") 
+				tnode.appendData("Walk the tree with me!");
+		};
+
+		document.getElementById("button2").onclick = function(){
+			var tnode = document.getElementById("p3").firstChild;	if(tnode.nodeValue != "") 
+				tnode.deleteData(0,1000);
+		};
+
+	</script>
+</html>

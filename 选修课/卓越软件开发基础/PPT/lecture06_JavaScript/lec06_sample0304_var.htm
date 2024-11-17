@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style type="text/css">
+		body{font-size:16pt;}
+		h1{font-size:28pt;font-weight:bold;color:red;}
+    </style>
+  </head>
+  <body>
+	<h1>This is H1 element</h1>
+	<script>
+		//变量可重复定义
+		var a=1;
+		var a="string";
+		document.write("a is "+a+"<br>");
+
+		//变量没有局部作用域
+		for(var b=1;b<5;b++) ;
+		document.write("b is "+b+"<br>");
+
+		var c=2;
+		//函数中声明变量是局部变量
+		function test(){
+			var c=3;
+			document.write("c is "+c+"<br>");
+		}
+		test();
+		document.write("c is "+c+"<br>");
+
+		//变量会提升声明（非赋值）
+		function test2(){
+			var d=3;
+			document.write("c is "+c+"<br>");
+			document.write("d is "+d+"<br>");
+			document.write("e is "+e+"<br>");
+			var e=4;
+		}
+		test2();
+	</script>
+  </body>
+</html>

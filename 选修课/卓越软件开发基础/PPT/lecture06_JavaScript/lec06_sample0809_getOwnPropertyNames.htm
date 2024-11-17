@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		class SuperType{ 
+			constructor(id){
+				this.id = id;
+			}
+			getId(){ 
+				return this.id; 
+			} 
+		}
+		
+		class SubType extends SuperType{ 
+			constructor(id,name){
+				super(id);
+				this.name = name;
+			}
+			getId(){ 
+				return super.getId();
+			} 
+			getName(){ 
+				return this.name;
+			} 
+		}
+
+		SubType.prototype.lost = false;
+		var instance = new SubType("992407","zdl");
+		Object.defineProperty(instance, "name", { enumerable: false, });
+
+		var log = "for in is ";
+		for (let prop in instance)
+			log = log + prop +" ";
+		document.write(log+"<br>");
+		
+		log = "Object.keys is " + Object.keys(instance).join();
+		document.write(log+"<br>");
+
+		log = "Object.getOwnPropertyNames is " + 
+		Object.getOwnPropertyNames(instance).join();
+		document.write(log+"<br>");
+
+	</script>
+  </body>
+</html>

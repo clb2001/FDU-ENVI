@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+  </body>
+	<script>
+
+        //set the timeout
+        var timeoutId = setTimeout(function() {
+            alert("Hello world!");
+        }, 1000);
+        
+        //nevermind ?cancel it
+        clearTimeout(timeoutId);
+        
+        //Show
+        setTimeout(function() { 
+            alert("Hello Hell!"); 
+        }, 1000);
+
+	</script>
+</html>

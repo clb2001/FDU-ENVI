@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+		input{font-size:28pt;font-weight:bold;}
+    </style>
+  </head>
+  <body bgcolor="white" text="red" link="blue" alink="green" vlink="yellow">
+	<a href="xxx">Excepteur sint occaecat </a>cupidatat non proident<br>
+	<a href="xxx">Excepteur sint occaecat </a>cupidatat non proident<br>
+	<input type="button" value="change bgcolor" id="button1" name="button1">
+	<input type="button" value="change textcolor" id="button2" name="button2">
+	<input type="button" value="change linkcolor" id="button3" name="button3">
+	<input type="button" value="change alinkcolor" id="button4" name="button4">
+	<input type="button" value="change vlinkcolor" id="button5" name="button5">
+  </body>
+	<script>
+		var bgcolorflag = 0;
+		var fgcolorflag = 0;
+		var linkcolorflag = 0;
+		var alinkcolorflag = 0;
+		var vlinkcolorflag = 0;
+
+		document.getElementById("button1").onclick = function(){
+			if(bgcolorflag==0)
+			{
+				document.bgColor = "black";
+				bgcolorflag = 1;
+			}
+			else
+			{
+				document.bgColor = "white";
+				bgcolorflag = 0;
+			}
+		};
+
+		document.getElementById("button2").onclick = function(){
+			if(fgcolorflag==0)
+			{
+				document.fgColor = "orange";
+				fgcolorflag = 1;
+			}
+			else
+			{
+				document.fgColor = "red";
+				fgcolorflag = 0;
+			}
+		};
+
+		document.getElementById("button3").onclick = function(){
+			if(linkcolorflag==0)
+			{
+				document.linkColor = "purple";
+				linkcolorflag = 1;
+			}
+			else
+			{
+				document.linkColor = "blue";
+				linkcolorflag = 0;
+			}
+		};
+
+		document.getElementById("button4").onclick = function(){
+			if(alinkcolorflag==0)
+			{
+				document.alinkColor = "tomato";
+				alinkcolorflag = 1;
+			}
+			else
+			{
+				document.alinkColor = "green";
+				alinkcolorflag = 0;
+			}
+		};
+
+		document.getElementById("button5").onclick = function(){
+			if(vlinkcolorflag==0)
+			{
+				document.vlinkColor = "lime";
+				vlinkcolorflag = 1;
+			}
+			else
+			{
+				document.vlinkColor = "yellow";
+				vlinkcolorflag = 0;
+			}
+		};
+	</script>
+</html>

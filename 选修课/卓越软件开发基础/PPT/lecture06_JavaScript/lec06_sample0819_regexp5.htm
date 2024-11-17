@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+        var text = "cat, bat, sat, fat, zdl";        
+        
+        result = text.replace(/at/, "ond");
+		//"cond, bat, sat, fat, zdl"
+		document.write("result is "+result+"<br>");	
+
+		result = text.replace(/at/g, "ond");
+		//"cond, bond, sond, fond, zdl"
+		document.write("result is "+result+"<br>");	
+
+	</script>
+  </body>
+</html>

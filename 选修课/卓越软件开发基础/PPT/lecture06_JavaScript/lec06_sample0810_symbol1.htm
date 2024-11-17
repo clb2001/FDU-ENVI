@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+	
+		let name = Symbol();
+        //symbol
+        document.write("typeof name is "+(typeof name)+"<br>");
+
+        let id1 = Symbol();
+        let id2 = Symbol();
+        //false
+		document.write("id1 === id2 is "+(id1 === id2)+"<br>");
+
+        let child1 = Symbol("child");
+        let child2 = Symbol("child");
+        //false
+		document.write("child1 === child2 is "+(child1 === child2)+"<br>");
+        //Symbol(child)
+		document.write("child1 is "+ String(child1)+"<br>");
+
+	</script>
+  </body>
+</html>

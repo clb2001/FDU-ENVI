@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script>
+		function a(x){return x;}
+
+		var m = [];
+		m[0] = a;
+		m[1] = 10;
+		m[2] = m[0](m[1]);
+
+		document.write("m[2] is "+m[2]+"<br>");
+	</script>
+  </body>
+</html>

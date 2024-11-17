@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+		let m1 = new Map([["id","9924077"],["name","zdl"]]);
+		//2
+		document.write(m1.size+"<br>");
+		//9924077
+		document.write(m1.get("id")+"<br>");
+		//zdl
+		document.write(m1.get("name")+"<br>");
+		
+		let m2 = new Map();
+		let k1 = ['a'];
+		let k2 = ['a'];
+		m2.set(k1,1);
+		m2.set(k2,2);
+		//1
+		document.write(m2.get(k1)+"<br>");
+		//2
+		document.write(m2.get(k2)+"<br>");
+			
+	</script>
+  </body>
+</html>

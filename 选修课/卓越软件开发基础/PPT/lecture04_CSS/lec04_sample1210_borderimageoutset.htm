@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture4 Sample</title>
+	<style>
+		body {display: flex; justify-content: space-around;}
+		body > p {width: 25%;}
+		p.border {border: 2px solid;	padding: 0.5em;}
+		p.image.border {
+			border-image-source: url(pictures/circles.png);
+			border-image-slice: 50;
+			border-image-width: 10px;
+		}
+		p.outset { border-image-outset: 8px; }
+    </style>
+  </head>
+ <body>
+	<p class="image border outset">	A paragraph with a 10-pixel image border and an 8-pixel border image outset. </p>
+	<p class="image border">A paragraph with a 10-pixel image border but no border image outset. </p>
+	<p class="border">A paragraph without an image border, but with the same styles otherwise.	</p>  
+  </body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script>
+
+		var scope = "global scope";
+
+		function checkscope(){
+			scope = "local scope";
+			document.write("scope is "+scope+"<br>");
+			function nested(){
+				scope = "nested scope";
+				document.write("scope is "+scope+"<br>");
+			}
+			nested();
+		}
+		//local scope
+		//nested scope
+		checkscope();
+
+		//nested scope
+		document.write("scope is "+scope+"<br>");
+
+	</script>
+  </body>
+</html>

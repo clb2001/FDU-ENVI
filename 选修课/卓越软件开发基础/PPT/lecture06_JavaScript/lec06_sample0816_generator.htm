@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+		function *createIterator(items) {
+			for (let i = 0; i < items.length; i++) {
+				yield items[i];
+			}
+		}
+
+		let iter = createIterator([1, 2, 3]);
+
+		let o = iter.next();
+
+		//1¡¢2¡¢3
+		while(!o.done)
+		{
+			document.write(o.value+"<br>");
+			o = iter.next();
+		}
+		
+	</script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+  </body>
+	<script>
+
+        var num = 0;
+        var max = 10;
+
+		function incrementNumber() {
+            num++;
+        
+            //if the max has not been reached, set another timeout
+            if (num < max) {
+                setTimeout(incrementNumber, 500);
+            } else {
+                alert("Done");
+            }
+        }
+        
+        setTimeout(incrementNumber, 500);
+
+	</script>
+</html>

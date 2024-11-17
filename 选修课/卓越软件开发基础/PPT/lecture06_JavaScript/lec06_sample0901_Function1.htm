@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script>
+
+		var f = new Function("x","y","return x*y;");
+
+		//f(10,20) is 200
+		try{	
+			document.write("f(10,20) is "+f(10,20)+"<br>");
+		}catch(ex){
+			document.write("f is unavailable"+"<br>");
+		}
+
+		f = new Function("return 'hello';");
+
+		//f() is hello
+		try{	
+			document.write("f() is "+f()+"<br>");
+		}catch(ex){
+			document.write("f is unavailable"+"<br>");
+		}
+
+	</script>
+  </body>
+</html>

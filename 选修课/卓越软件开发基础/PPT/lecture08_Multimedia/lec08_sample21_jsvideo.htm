@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture8 Sample</title>
+	<style>
+		video {border:1px solid black;}
+	</style>
+  </head>
+  <body>
+	<div class="mediaplayer">
+		<video id="player" width="400" height="300">
+			如果不支持video元素，将看到该部分文字
+		</video>
+	</div>
+	<div class="controls">
+		<input type="button" value="Play" id="control_btn">  
+	</div>
+  </body>
+	<script>
+		var vplayer = document.getElementById("player");
+
+		if(vplayer.canPlayType("video/ogv"))
+			vplayer.src = "video/butterfly.ogv";
+		else
+			vplayer.src = "video/butterfly.mp4";
+
+		var btn = document.getElementById("control_btn");
+		
+		btn.addEventListener("click",vplay,false);
+		
+		function vplay(){
+			if(vplayer.paused){
+				vplayer.play();
+				btn.value = "Pause";
+			}
+			else{
+				vplayer.pause();
+				btn.value = "Play";
+			}
+		}
+	</script>
+</html>

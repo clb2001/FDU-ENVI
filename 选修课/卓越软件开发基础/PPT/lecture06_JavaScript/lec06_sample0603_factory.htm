@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script>
+		function CreateStudent(id){
+			var o = new Object();
+			o.id = id;
+			o.getId = function(){ return this.id;};
+			
+			return o;
+		}
+		
+		var student1 = CreateStudent("992479");
+		document.write("student1 is "+student1.getId()+"<br>");
+	</script>
+  </body>
+</html>

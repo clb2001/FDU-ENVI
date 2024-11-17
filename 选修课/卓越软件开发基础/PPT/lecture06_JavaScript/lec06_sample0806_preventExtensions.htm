@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+        var student1 = { name: "zdl" };
+		//true
+		document.write("Object.isExtensible(student1) is "+Object.isExtensible(student1)+"<br>");
+
+        Object.preventExtensions(student1);
+        
+		student1.age = 35;
+		//undefined
+		document.write(student1.age+"<br>");
+		//false
+		document.write("Object.isExtensible(student1) is "+Object.isExtensible(student1)+"<br>");
+  
+
+	</script>
+  </body>
+</html>

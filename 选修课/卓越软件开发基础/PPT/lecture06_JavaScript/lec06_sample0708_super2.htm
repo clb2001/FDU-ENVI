@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+		let person = {
+			getGreeting() {
+				return "Hello";
+		}
+		};
+		// prototype is person
+		let friend = {
+			getGreeting() {
+				return Object.getPrototypeOf(this).getGreeting.call(this) + ", hi!";
+			}
+		};
+		Object.setPrototypeOf(friend, person);
+		// prototype is friend
+		let relative = Object.create(friend);
+		console.log(person.getGreeting()); // "Hello"
+		console.log(friend.getGreeting()); // "Hello, hi!"
+		console.log(relative.getGreeting()); // error!	
+
+	</script>
+  </body>
+</html>

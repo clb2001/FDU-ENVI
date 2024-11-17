@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+		input{font-size:28pt;font-weight:bold;}
+    </style>
+  </head>
+  <body>
+	<input type="text" id="text1" name="text1" value="[text]">
+	<input type="button" value="change text" id="button1" name="button1">
+  </body>
+	<script>
+
+		document.getElementById("button1").onclick = function(){
+			document.all.text1.value = "changed";
+		};
+
+	</script>
+</html>

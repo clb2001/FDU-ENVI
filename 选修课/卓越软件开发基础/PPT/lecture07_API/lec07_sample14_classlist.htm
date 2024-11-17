@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+		input{font-size:28pt;font-weight:bold;}
+    </style>
+  </head>
+
+  <body>
+	<p id="p1" class="zdl">Student name is zdl.</p>
+	<input type="button" value="show data attribute" id="button1" name="button1">
+  </body>
+	<script>
+		document.getElementById("button1").onclick = function(){
+			var tnode = document.getElementById("p1");
+			
+			tnode.classList.toggle("robin");
+			//zdl robin / zdlÂÖÌæ
+			alert(tnode.className);
+		}£»
+	</script>
+
+</html>

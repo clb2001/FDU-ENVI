@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+		let a1 = [1,2,3,4,5];
+		
+		//0、1、2、3、4
+		for(let key in a1)
+			document.write(key+"<br>");
+		
+		//1、2、3、4、5
+		for(let value of a1)
+			document.write(value+"<br>");
+
+		let iter = a1[Symbol.iterator]();
+
+		//1、2、3、4、5
+		for(let value of iter)
+			document.write(value+"<br>");
+
+
+		//H、e、l、l、o
+		let str = "Hello";
+		for(let value of str)
+			document.write(value+"<br>");
+		
+		//a、b、c、d
+		let s1 = new Set(["a","b","c","d","d","d","d"]);
+		for(let value of s1)
+			document.write(value+"<br>");
+
+		//id:9924077、name:zdl
+		let m1 = new Map([["id","9924077"],["name","zdl"]]);
+		for(let [key,value] of m1)
+			document.write(key+":"+value+"<br>");
+
+		
+	</script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script>
+
+		var scope = "global scope";
+
+		function checkscope(){
+			var scope = "local scope";
+			return function(){
+				document.write("scope is "+scope+"<br>");
+			}
+		}
+		
+		var outer = checkscope();
+
+		//local scope
+		outer();
+
+		//global scope
+		document.write("scope is "+scope+"<br>");
+
+	</script>
+  </body>
+</html>

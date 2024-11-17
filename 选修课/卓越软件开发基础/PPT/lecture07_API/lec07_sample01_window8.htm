@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+		input{font-size:28pt;font-weight:bold;}
+    </style>
+  </head>
+  <body>
+  </body>
+	<script>
+
+		//avoid!
+        setTimeout("alert('Hello world!') ", 1000);
+        
+        //preferred
+        setTimeout(function() { 
+            alert("Hello world!"); 
+        }, 1000);
+	</script>
+</html>

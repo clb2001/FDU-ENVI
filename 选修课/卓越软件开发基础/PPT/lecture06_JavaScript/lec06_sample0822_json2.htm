@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+        var student1 = {
+							"name":"zdl",
+							"sclass":["web","java"],
+							"school":{
+								"name":"software",
+								"location":"zhangjiang"
+							}
+						};        
+        
+        var jsontext = JSON.stringify(student1,["name","sclass"]);
+		
+		student1 = JSON.parse(jsontext);
+		
+		//web
+		document.write("student1.sclass[0] is "+student1.sclass[0]+"<br>");	
+
+
+	</script>
+  </body>
+</html>

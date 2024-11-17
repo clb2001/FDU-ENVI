@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style id="dyn">
+		body{font-size:16pt;background-color:white;}
+		input{font-size:16pt;}
+    </style>
+  </head>
+
+  <body>
+	<form method="post" action="" id="form1" name="form1">
+		<input type="text" id="text1" name="text1" value="[text]"><br>
+		<input type="password" value="" name="text2" ><br>
+		<input type="hidden" value="[HiddenText]" name="text3" ><br>
+		<textarea name="textarea1" rows="10" cols="15">Hello Hell!</textarea><br>
+		<input type="radio" name="radio1" value="radio1" checked="checked" > radio1<br>
+		<input type="radio" name="radio1" value="radio2" > radio2<br>
+		<input type="radio" name="radio1" value="radio3" > radio3<br>
+		<input type="checkbox" name="checkbox1" value="1" checked="checked" > checkbox1<br>
+		<input type="checkbox" name="checkbox1" value="2" > checkbox2<br>
+		<input type="checkbox" name="checkbox1" value="3" checked="checked" > checkbox3<br>
+		<select name="select1">
+			<option>-----</option>
+			<option>item1</option>
+			<option>item2</option>
+			<option>item3</option>
+			<option>item4</option>
+		</select>
+		<select name="select2" multiple="multiple" size="3">
+			<option>item1</option>
+			<option>item2</option>
+			<option>item3</option>
+			<option>item4</option>
+		</select><hr>
+		<input type="button" value="Get Value" onclick="getvalue()">
+	</form>
+  </body>
+
+	<script>
+		function getvalue()
+		{
+			var str
+			str = document.form1.text1.value;
+			str = str + "\n" + document.form1.text2.value;
+			str = str + "\n" + document.form1.text3.value;
+			str = str + "\n" + document.form1.textarea1.value;
+
+			if(document.form1.radio1[0].checked)
+				str = str + "\n" + "radio1";
+			else if(document.form1.radio1[1].checked)
+				str = str + "\n" + "radio2";
+			else
+				str = str + "\n" + "radio3";
+			
+			if(document.form1.checkbox1[0].checked)
+				str = str + "\n" + "checkbox1";
+			if(document.form1.checkbox1[1].checked)
+				str = str + "\n" + "checkbox2";
+			if(document.form1.checkbox1[2].checked)
+				str = str + "\n" + "checkbox3";
+
+			str = str + "\n" + document.form1.select1.options[document.form1.select1.selectedIndex ].text;
+
+			for(i=0;i<document.form1.select2.length;i++)
+				if(document.form1.select2.options[i].selected)
+					str = str + "\n" + document.form1.select2.options[i].text;
+			
+			displayvalue(str);
+		}
+
+		function displayvalue(mystr)
+		{
+			win2 = window.open("","window2");
+			win2.document.open("text/plain");
+			win2.document.writeln(mystr);
+			win2.document.close();
+		}
+	</script>
+
+</html>

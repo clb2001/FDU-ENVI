@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+		array1 = new Array("red","blue","green");
+		
+		document.write(array1.length+"<br>");
+		for(i=0;i<array1.length;i++)
+			document.write(array1[i]+" ");
+		document.write("<br>");
+
+		array1.push("purple");
+		document.write(array1.push("orange","lime")+"<br>");
+		document.write(array1.pop()+"<br>");
+
+		document.write(array1.length+"<br>");
+		for(i=0;i<array1.length;i++)
+			document.write(array1[i]+" ");
+		document.write("<br>");
+
+		array1.unshift("purple");
+		document.write(array1.unshift("orange","lime")+"<br>");
+		document.write(array1.shift()+"<br>");
+		
+		document.write(array1.length+"<br>");
+		for(i=0;i<array1.length;i++)
+			document.write(array1[i]+" ");
+		document.write("<br>");
+
+	</script>
+  </body>
+</html>

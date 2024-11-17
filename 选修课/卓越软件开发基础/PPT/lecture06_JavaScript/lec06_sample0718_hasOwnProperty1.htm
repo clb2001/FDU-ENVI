@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		function SuperType(){ 
+			this.name = "Nicholas";
+			if(typeof this.getSuperValue != "function")
+				SuperType.prototype.getSuperValue = function(){ return this.name; };
+		}
+		
+		function SubType(){ 
+			this.age = 29; 
+			if(typeof this.getSubValue != "function")
+				SubType.prototype.getSubValue = function(){ return this.age; };
+		}
+	
+		SubType.prototype = new SuperType();
+
+		var instance = new SubType();
+		
+		document.write("instance.hasOwnProperty('name') is "+instance.hasOwnProperty('name')+"<br>");
+		document.write("instance.hasOwnProperty('age') is "+instance.hasOwnProperty('age')+"<br>");
+		document.write("instance.hasOwnProperty('getSuperValue') is "+instance.hasOwnProperty('getSuperValue')+"<br>");
+		document.write("instance.hasOwnProperty('getSubValue') is "+instance.hasOwnProperty('getSubValue')+"<br>");
+
+	</script>
+  </body>
+</html>

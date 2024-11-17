@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+        function compare(value1, value2) {
+            if (value1 < value2) {
+                return -1;
+            } else if (value1 > value2) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+        
+		var array1 = new Array(0, 1, 5, 10, 15);
+		
+		array1.sort();
+		//0 1 10 15 5
+		for(i=0;i<array1.length;i++)
+			document.write(array1[i]+" ");
+		document.write("<br>");
+
+		array1.sort(compare);
+		//0 1 5 10 15
+		for(i=0;i<array1.length;i++)
+			document.write(array1[i]+" ");
+		document.write("<br>");
+
+	</script>
+  </body>
+</html>

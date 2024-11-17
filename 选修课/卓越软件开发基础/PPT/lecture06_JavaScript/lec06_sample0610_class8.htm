@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		let methodName = "getId";
+		
+		class Student{
+			constructor(id){
+				this.id = id;
+			}
+			
+			[methodName](){ 
+				return this.id; 
+			} 
+		}
+		var student1 = new Student("9924077");
+		
+		document.write("student1 is "+student1.getId()+"<br>");
+     
+	</script>
+  </body>
+</html>

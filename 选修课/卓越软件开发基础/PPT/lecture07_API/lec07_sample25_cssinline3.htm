@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture7 Sample</title>
+    <style>
+		body{font-size:16pt;}
+		h1{font-size:28pt;font-weight:bold;color:red;}
+		input{font-size:16pt;}
+    </style>
+  </head>
+
+  <body>
+	<h1 style="font-size:16pt;color:red;" id="h11">This is H1 element</h1>
+	<p>Let's see the effective of css</p>
+	<input type="button" value="Change" id="button1" >
+  </body>
+	<script>
+		var btn = document.getElementById("button1");
+		var h11 = document.getElementById("h11");
+		
+		btn.onclick = function(){
+			var computedStyle;
+			if(h11.currentStyle)
+				computedStyle =h11.currentStyle;
+			else
+				computedStyle = document.defaultView.getComputedStyle(h11,null);
+			//[object CSSStyleDeclaration]
+			alert(computedStyle);
+			//21.3333px
+			alert(computedStyle.fontSize);
+
+		};
+	</script>
+
+</html>

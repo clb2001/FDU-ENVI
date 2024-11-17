@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		let person = new class {
+			constructor(id) {
+				this.id = id;
+			}
+			getId() {
+				document.write(this.id);
+			}
+		}("9924007");
+		
+		person.getId(); 
+     
+	</script>
+  </body>
+</html>

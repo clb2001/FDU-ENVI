@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		function SuperType(){ 
+			this.property = true;
+			if(typeof this.getSuperValue != "function")
+				SuperType.prototype.getSuperValue = function(){ return this.property; };
+		}
+		
+		function SubType(){ 
+			this.subproperty = false; 
+		}
+
+		SubType.prototype = new SuperType();	//!!
+
+		SubType.prototype.getSubValue = function(){ return this.subproperty; };
+		
+		var instance = new SubType();
+		document.write("SubType.prototype.isPrototypeOf(instance) is "+ SubType.prototype.isPrototypeOf(instance) +"<br>");
+		document.write("SuperType.prototype.isPrototypeOf(instance) is "+ SuperType.prototype.isPrototypeOf(instance) +"<br>");
+		document.write("Object.prototype.isPrototypeOf(instance) is "+ Object.prototype.isPrototypeOf(instance) +"<br>");
+		document.write("SubType.isPrototypeOf(instance) is "+ SubType.isPrototypeOf(instance) +"<br>");
+
+	</script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		var array1 = [1,2,"str",null];
+		
+		array1[1] = "str2";
+		document.write(array1.length+"<br>");
+		for(i=0;i<array1.length;i++)
+			document.write(array1[i]+" ");
+		document.write("<br>");
+
+		array1.length = 3;
+		document.write(array1.length+"<br>");
+		for(i=0;i<array1.length;i++)
+			document.write(array1[i]+" ");
+		document.write("<br>");
+		
+		array1.length = 5;
+		document.write(array1.length+"<br>");
+		for(i=0;i<array1.length;i++)
+			document.write(array1[i]+" ");
+		document.write("<br>");
+
+		array1[9] = "str9";
+		document.write(array1.length+"<br>");
+		for(i=0;i<array1.length;i++)
+			document.write(array1[i]+" ");
+		document.write("<br>");
+
+		array1.length = 3;
+		array1[array1.length] = "str4";
+		document.write(array1.length+"<br>");
+		for(i=0;i<array1.length;i++)
+			document.write(array1[i]+" ");
+		document.write("<br>");
+		
+		delete array1[2];
+		document.write(array1.length+"<br>");
+		for(i in array1)
+			document.write(array1[i]+" ");
+		document.write("<br>");
+			
+	</script>
+  </body>
+</html>

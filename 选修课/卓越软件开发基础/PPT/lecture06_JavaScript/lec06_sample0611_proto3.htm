@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		function Student(id){
+			this.id = id;
+			if(typeof this.getId != "function")
+				Student.prototype.getId = function(){ return this.id;};
+		}
+		
+		var student1 = new Student("9924077");
+		Student.prototype.name = "zdl";
+		
+		delete student1.name;
+		//zdl
+		document.write("student1.name is "+student1.name+"<br>");
+		
+		student1.name = "zhu";
+		//zhu
+		document.write("student1.name is "+student1.name+"<br>");
+
+		delete student1.name;
+		//zdl
+		document.write("student1.name is "+student1.name+"<br>");
+				
+	</script>
+  </body>
+</html>

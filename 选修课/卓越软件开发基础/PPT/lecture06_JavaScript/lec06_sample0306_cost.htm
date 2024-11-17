@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style type="text/css">
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script>
+		//常量不可重复定义
+		const a=1;
+		try{a="string";}
+		catch(e){document.write("error<br>");}
+
+
+		//常量不会提升声明
+		function test(){
+			let b=3;
+			document.write("b is "+b+"<br>");
+			try{document.write("c is "+c+"<br>");}
+			catch(e){document.write("error<br>");}
+			const c=4;
+		}
+
+		test();
+	
+		
+	</script>
+  </body>
+</html>

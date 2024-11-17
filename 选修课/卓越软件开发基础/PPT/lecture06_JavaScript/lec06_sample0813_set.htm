@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+
+		let s1 = new Set([1,2,3,4,5,5,5]);
+		//5
+		document.write(s1.size+"<br>");
+		
+		s2 = new Set();
+		s2.add(5);
+		s2.add("5");
+		s2.add(5);
+		//2
+		document.write(s2.size+"<br>");
+
+		s3 = new Set();
+		s3.add({});
+		s3.add({});
+		//2
+		document.write(s3.size+"<br>");
+		
+			
+	</script>
+  </body>
+</html>

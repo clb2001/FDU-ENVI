@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture4 Sample</title>
+	<style>
+		body{counter-reset:chapter section subsec;}
+
+		h1{font-size:28pt; font-weight:bold; color:red; counter-reset: section subsec;	counter-increment:chapter;}
+		h1::before{content:counter(chapter,upper-alpha)".";}
+		
+		h2{font-size:24pt; font-weight:bold; color:green;	counter-reset:subsec; counter-increment:section;	}
+		
+		h2::before{ content:counter(chapter,upper-alpha) "." counter(section) "."; }
+		
+		h3{font-size:22pt;font-weight:bold;color:blue;	counter-increment:subsec;}
+		
+		h3::before{	content:counter(chapter,upper-alpha)"."counter(section)"."counter(subsec,lower-roman) ".";}
+	</style>
+  </head>
+  <body>
+	<h1>This is H1 element</h1>
+	<h2>This is H2 element</h2>
+	<h3>This is H3 element</h3>
+	<h3>This is H3 element</h3>
+	<h2>This is H2 element</h2>
+	<h3>This is H3 element</h3>
+	<h3>This is H3 element</h3>
+	<h1>This is H1 element</h1>
+	<h2>This is H2 element</h2>
+	<h3>This is H3 element</h3>
+	<h1>This is H1 element</h1>
+	<h2>This is H2 element</h2>
+	<h3>This is H3 element</h3>
+  </body>
+</html>

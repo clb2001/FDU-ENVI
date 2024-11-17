@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		function SuperType(name){ 
+			this.name = name;
+			if(typeof this.getSuperValue != "function")
+				SuperType.prototype.getSuperValue = function(){ return this.name; };
+		}
+		
+		var instance = new SuperType();
+
+		document.write("typeof x is "+typeof x+"<br>");
+		document.write("typeof true is "+typeof true+"<br>");
+		document.write("typeof 'zdl' is "+typeof 'zdl'+"<br>");
+		document.write("typeof 2 is "+typeof 2+"<br>");
+		document.write("typeof instance is "+typeof instance+"<br>");
+		document.write("typeof null is "+typeof null+"<br>");
+		document.write("typeof SuperType is "+typeof SuperType+"<br>");
+
+	</script>
+  </body>
+</html>

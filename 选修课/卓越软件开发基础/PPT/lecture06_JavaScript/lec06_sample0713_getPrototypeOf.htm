@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		function Student(id){ 
+			this.id = id;
+			if(typeof this.getId != "function")
+				Student.prototype.getId = function(){ return this.id;};
+		}
+		
+		Student.prototype.name = "zdl";
+		
+		var student1 = new Student("9924077");
+		
+		//zdl
+		document.write("student1.constructor.prototype.name is "+ student1.constructor.prototype.name +"<br>");
+		document.write("Object.getPrototypeOf(student1).name is "+ Object.getPrototypeOf(student1).name +"<br>");
+		document.write("student1.__proto__.name is "+ student1.__proto__.name +"<br>");
+
+	</script>
+  </body>
+</html>

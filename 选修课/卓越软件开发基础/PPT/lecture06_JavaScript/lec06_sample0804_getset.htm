@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture6 Sample</title>
+    <style>
+		body{font-size:16pt;}
+    </style>
+  </head>
+  <body>
+	<script> 
+		class Student{
+			constructor(roommate){
+				this.roommate = roommate;
+			}
+			
+			get roommate(){ 
+				return this.roommate.number; 
+			} 
+
+			set roommate(number){
+				this.roommate.number = number;
+			}
+				
+		}
+		var descriptor = Object.getOwnPropertyDescriptor(Student.prototype, "roommate")
+		
+		//true
+		document.write("get in descriptor is "+("get" in descriptor)+"<br>");
+		//true
+		document.write("set in descriptor is "+("set" in descriptor)+"<br>");
+		//false
+		document.write("descriptor.enumerable is " + descriptor.enumerable + "<br>");
+     
+	</script>
+  </body>
+</html>
